@@ -1,0 +1,40 @@
+{
+    "name": "aramboyajyan/sample-ui",
+    "description": "Reusable Laravel UI components styled with Tailwind CSS for corporate projects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sample Team",
+            "email": "work@aram.cz"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/view": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ussf\\UiComponents\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ussf\\UiComponents\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ussf\\UiComponents\\UiComponentsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

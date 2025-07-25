@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .ui-button {
+    @apply inline-flex items-center justify-center font-medium border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .ui-button--sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+  
+  .ui-button--md {
+    @apply px-4 py-2 text-base;
+  }
+  
+  .ui-button--lg {
+    @apply px-6 py-3 text-lg;
+  }
+  
+  .ui-button--primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white border-transparent;
+  }
+  
+  .ui-button--secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 border-transparent;
+  }
+  
+  .ui-button--blank {
+    @apply bg-transparent hover:bg-gray-100 text-gray-700 border-gray-300;
+  }
+}

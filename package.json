@@ -1,0 +1,12 @@
+{
+  "name": "sample-ui",
+  "version": "1.0.0",
+  "description": "Reusable Laravel UI components styled with Tailwind CSS",
+  "scripts": {
+    "dev": "tailwindcss -i ./resources/css/ui-components.css -o ./dist/ui-components.css --watch",
+    "build": "tailwindcss -i ./resources/css/ui-components.css -o ./dist/ui-components.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0"
+  }
+}
