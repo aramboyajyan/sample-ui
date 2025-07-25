@@ -1,0 +1,22 @@
+name: Update Packagist
+
+on:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+      - master
+
+jobs:
+  packagist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Packagist
+        uses: symfonycorp/security-checker-action@v2
+        env:
+          PACKAGIST_API_TOKEN: ${{ secrets.PACKAGIST_API_TOKEN }}
+        run: |
+          curl -XPOST -H'content-type:application/json' \
+          'https://packagist.org/api/update-package?username=${{ secrets.PACKAGIST_USERNAME }}&apiToken=${{ secrets.PACKAGIST_API_TOKEN }}' \
+          -d'{"repository":{"url":"https://github.com/${{ github.repository }}"}}'
