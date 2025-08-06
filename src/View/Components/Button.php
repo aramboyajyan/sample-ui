@@ -69,8 +69,7 @@ class Button extends Component
     return match ($this->type) {
       'primary' => 'ussf-bg-blue-600 hover:ussf-bg-blue-700 ussf-text-white ussf-border-transparent',
       'secondary' => 'ussf-bg-gray-200 hover:ussf-bg-gray-300 ussf-text-gray-900 ussf-border-transparent',
-      'blank' => 'ussf-bg-transparent hover:ussf-bg-gray-100 ussf-text-gray-700 ussf-border-gray-300',
-      default => 'ussf-bg-blue-600 hover:ussf-bg-blue-700 ussf-text-white ussf-border-transparent',
+      default => 'ussf-bg-transparent hover:ussf-bg-gray-100 ussf-text-gray-700 ussf-border-gray-300',
     };
   }
 

@@ -1,3 +1,17 @@
+const ussfBlue = {
+  DEFAULT: '#1e2031',
+  50: '#f2f3f8',
+  100: '#d9dbe4',
+  200: '#b3b6c9',
+  300: '#8d91ad',
+  400: '#666b92',
+  500: '#1e2031',
+  600: '#191b2a',
+  700: '#141523',
+  800: '#0e101b',
+  900: '#090a12',
+};
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   prefix: 'ussf-',
@@ -80,31 +94,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-        },
-        'ussf-blue': {
-          DEFAULT: '#1e2031',
-          50: '#f2f3f8',
-          100: '#d9dbe4',
-          200: '#b3b6c9',
-          300: '#8d91ad',
-          400: '#666b92',
-          500: '#1e2031',
-          600: '#191b2a',
-          700: '#141523',
-          800: '#0e101b',
-          900: '#090a12',
-        },
+        primary: ussfBlue,
+        'ussf-blue': ussfBlue,
         'ussf-red': {
           DEFAULT: '#C2002F',
           50: '#fdebee',
