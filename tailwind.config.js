@@ -1,8 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: 'ussf-',
   content: [
     "./resources/views/**/*.blade.php",
     "./src/**/*.php",
+  ],
+  safelist: [
+    'ussf-bg-primary-500',
+    'ussf-text-white',
+    'ussf-bg-ussf-blue-600',
+    'ussf-bg-ussf-red-600',
+    'ussf-text-ussf-blue-500',
+    'ussf-text-ussf-red-500',
+    'ussf-font-sans',
+    'ussf-text-lg',
+    'ussf-text-xl',
+    'ussf-text-2xl',
+    'ussf-font-semibold',
+    'ussf-font-bold',
   ],
   theme: {
     extend: {

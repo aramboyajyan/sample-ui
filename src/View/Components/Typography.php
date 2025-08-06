@@ -23,17 +23,17 @@ class Typography extends Component
     public function getClasses(): string
     {
         return match ($this->variant) {
-            'h1' => 'text-4xl font-bold text-gray-900 leading-tight',
-            'h2' => 'text-3xl font-bold text-gray-900 leading-tight',
-            'h3' => 'text-2xl font-semibold text-gray-900 leading-tight',
-            'h4' => 'text-xl font-semibold text-gray-900 leading-tight',
-            'h5' => 'text-lg font-medium text-gray-900 leading-tight',
-            'h6' => 'text-base font-medium text-gray-900 leading-tight',
-            'p' => 'text-base text-gray-700 leading-relaxed',
-            'ul' => 'list-disc list-inside space-y-1 text-gray-700',
-            'ol' => 'list-decimal list-inside space-y-1 text-gray-700',
-            'li' => 'text-base text-gray-700',
-            default => 'text-base text-gray-700',
+            'h1' => 'ussf-text-4xl ussf-font-bold ussf-text-gray-900 ussf-leading-tight',
+            'h2' => 'ussf-text-3xl ussf-font-bold ussf-text-gray-900 ussf-leading-tight',
+            'h3' => 'ussf-text-2xl ussf-font-semibold ussf-text-gray-900 ussf-leading-tight',
+            'h4' => 'ussf-text-xl ussf-font-semibold ussf-text-gray-900 ussf-leading-tight',
+            'h5' => 'ussf-text-lg ussf-font-medium ussf-text-gray-900 ussf-leading-tight',
+            'h6' => 'ussf-text-base ussf-font-medium ussf-text-gray-900 ussf-leading-tight',
+            'p' => 'ussf-text-base ussf-text-gray-700 ussf-leading-relaxed',
+            'ul' => 'ussf-list-disc ussf-list-inside ussf-space-y-1 ussf-text-gray-700',
+            'ol' => 'ussf-list-decimal ussf-list-inside ussf-space-y-1 ussf-text-gray-700',
+            'li' => 'ussf-text-base ussf-text-gray-700',
+            default => 'ussf-text-base ussf-text-gray-700',
         };
     }
 }

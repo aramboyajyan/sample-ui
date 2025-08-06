@@ -37,18 +37,18 @@ class Button extends Component
     public function getSizeClasses(): string
     {
         return match ($this->size) {
-            'sm' => 'px-3 py-1.5 text-sm',
-            'lg' => 'px-6 py-3 text-lg',
-            default => 'px-4 py-2 text-base',
+            'sm' => 'ussf-px-3 ussf-py-1.5 ussf-text-sm',
+            'lg' => 'ussf-px-6 ussf-py-3 ussf-text-lg',
+            default => 'ussf-px-4 ussf-py-2 ussf-text-base',
         };
     }
 
     public function getIconSize(): string
     {
         return match ($this->size) {
-            'sm' => 'text-sm',
-            'lg' => 'text-lg',
-            default => 'text-base',
+            'sm' => 'ussf-text-sm',
+            'lg' => 'ussf-text-lg',
+            default => 'ussf-text-base',
         };
     }
 
@@ -59,29 +59,29 @@ class Button extends Component
         }
         
         return match ($this->iconPosition) {
-            'right' => 'ml-2',
-            default => 'mr-2',
+            'right' => 'ussf-ml-2',
+            default => 'ussf-mr-2',
         };
     }
 
     public function getTypeClasses(): string
     {
         return match ($this->type) {
-            'primary' => 'bg-blue-600 hover:bg-blue-700 text-white border-transparent',
-            'secondary' => 'bg-gray-200 hover:bg-gray-300 text-gray-900 border-transparent',
-            'blank' => 'bg-transparent hover:bg-gray-100 text-gray-700 border-gray-300',
-            default => 'bg-blue-600 hover:bg-blue-700 text-white border-transparent',
+            'primary' => 'ussf-bg-blue-600 hover:ussf-bg-blue-700 ussf-text-white ussf-border-transparent',
+            'secondary' => 'ussf-bg-gray-200 hover:ussf-bg-gray-300 ussf-text-gray-900 ussf-border-transparent',
+            'blank' => 'ussf-bg-transparent hover:ussf-bg-gray-100 ussf-text-gray-700 ussf-border-gray-300',
+            default => 'ussf-bg-blue-600 hover:ussf-bg-blue-700 ussf-text-white ussf-border-transparent',
         };
     }
 
     public function getRoundedClasses(): string
     {
-        return $this->rounded ? 'rounded-full' : 'rounded-md';
+        return $this->rounded ? 'ussf-rounded-full' : 'ussf-rounded-md';
     }
 
     public function getClasses(): string
     {
-        $baseClasses = 'inline-flex items-center justify-center font-medium border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+        $baseClasses = 'ussf-inline-flex ussf-items-center ussf-justify-center ussf-font-medium ussf-border ussf-transition-colors ussf-duration-200 focus:ussf-outline-none focus:ussf-ring-2 focus:ussf-ring-blue-500 focus:ussf-ring-offset-2 disabled:ussf-opacity-50 disabled:ussf-cursor-not-allowed';
         
         return implode(' ', [
             $baseClasses,

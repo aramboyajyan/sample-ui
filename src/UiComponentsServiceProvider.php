@@ -4,6 +4,7 @@ namespace Ussf\UiComponents;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 
 class UiComponentsServiceProvider extends ServiceProvider
 {
@@ -29,6 +30,11 @@ class UiComponentsServiceProvider extends ServiceProvider
         if (config('ui-components.apply_global_font', false)) {
             $this->applyGlobalFont();
         }
+
+        // Register documentation route if enabled
+        if (config('ui-components.enable_documentation_route', false)) {
+            $this->registerDocumentationRoute();
+        }
     }
 
     public function register()
@@ -51,5 +57,12 @@ class UiComponentsServiceProvider extends ServiceProvider
             echo "<style>body { font-family: {$fontFamily}; }</style>";
             app('view')->stopPush();
         }
+    }
+
+    protected function registerDocumentationRoute()
+    {
+        Route::get('/ussf-ui', function () {
+            return view('ui::documentation');
+        })->name('ussf-ui.documentation');
     }
 }
