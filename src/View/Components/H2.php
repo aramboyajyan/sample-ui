@@ -13,6 +13,6 @@ class H2 extends Component
 
   public function getClasses(): string
   {
-    return 'ussf-text-3xl ussf-font-bold ussf-text-gray-900 ussf-leading-tight';
+    return 'ussf-text-3xl ussf-font-bold ussf-text-gray-900 ussf-leading-tight ussf-mb-4 ussf-mt-1';
   }
 }

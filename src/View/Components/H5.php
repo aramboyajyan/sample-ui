@@ -13,6 +13,6 @@ class H5 extends Component
 
   public function getClasses(): string
   {
-    return 'ussf-text-lg ussf-font-medium ussf-text-gray-900 ussf-leading-tight';
+    return 'ussf-text-lg ussf-font-medium ussf-text-gray-900 ussf-leading-tight ussf-mb-2 ussf-mt-1';
   }
 }

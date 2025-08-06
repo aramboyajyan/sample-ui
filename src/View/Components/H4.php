@@ -13,6 +13,6 @@ class H4 extends Component
 
   public function getClasses(): string
   {
-    return 'ussf-text-xl ussf-font-semibold ussf-text-gray-900 ussf-leading-tight';
+    return 'ussf-text-xl ussf-font-semibold ussf-text-gray-900 ussf-leading-tight ussf-mb-2 ussf-mt-1';
   }
 }

@@ -13,6 +13,6 @@ class H3 extends Component
 
   public function getClasses(): string
   {
-    return 'ussf-text-2xl ussf-font-semibold ussf-text-gray-900 ussf-leading-tight';
+    return 'ussf-text-2xl ussf-font-semibold ussf-text-gray-900 ussf-leading-tight ussf-mb-3 ussf-mt-1';
   }
 }
