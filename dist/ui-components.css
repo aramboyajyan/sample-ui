@@ -597,6 +597,10 @@ html {
   margin-right: auto;
 }
 
+.ussf-mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .ussf-mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -621,16 +625,12 @@ html {
   margin-right: 0.5rem;
 }
 
-.ussf-mt-8 {
-  margin-top: 2rem;
-}
-
 .ussf-mt-1 {
   margin-top: 0.25rem;
 }
 
-.ussf-mb-1 {
-  margin-bottom: 0.25rem;
+.ussf-mt-8 {
+  margin-top: 2rem;
 }
 
 .ussf-inline-flex {
