@@ -20,5 +20,7 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+.claude
+
 # Keep built CSS (ships with package)
 # !dist/ui-components.css

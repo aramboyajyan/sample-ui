@@ -243,6 +243,47 @@ php artisan vendor:publish --tag=ui-views
 
 This will copy the component views to `resources/views/vendor/ui/` where you can customize them.
 
+## Troubleshooting
+
+### Styles Not Appearing
+
+If styles aren't working in your project:
+
+1. **Ensure you've published the assets**:
+   ```bash
+   php artisan vendor:publish --tag=ui-assets
+   ```
+
+2. **Check the CSS file exists**:
+   ```bash
+   ls -la public/vendor/ui/ui-components.css
+   ```
+
+3. **Verify CSS is included in your layout**:
+   ```blade
+   {{-- In your layout file (app.blade.php, etc.) --}}
+   @ussfStyles
+   
+   {{-- OR manually --}}
+   <link rel="stylesheet" href="{{ asset('vendor/ui/ui-components.css') }}">
+   ```
+
+4. **Clear cache if needed**:
+   ```bash
+   php artisan view:clear
+   php artisan config:clear
+   ```
+
+### Component Not Found
+
+If you get component errors like "Component [ui::button] not found":
+
+1. **Ensure the service provider is registered** (should be automatic with Laravel auto-discovery)
+2. **Check config is published**:
+   ```bash
+   php artisan vendor:publish --tag=ui-config
+   ```
+
 ## License
 
 MIT License
