@@ -4,7 +4,8 @@
   "description": "Reusable Laravel UI components styled with Tailwind CSS",
   "scripts": {
     "dev": "tailwindcss -i ./resources/css/ui-components.css -o ./dist/ui-components.css --watch",
-    "build": "tailwindcss -i ./resources/css/ui-components.css -o ./dist/ui-components.css --minify"
+    "build": "tailwindcss -i ./resources/css/ui-components.css -o ./dist/ui-components.css --minify",
+    "dev:copy": "npm run dev && cp dist/ui-components.css ../test-project/public/vendor/ui/"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.0"

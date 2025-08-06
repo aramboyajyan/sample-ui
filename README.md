@@ -243,6 +243,10 @@ php artisan vendor:publish --tag=ui-views
 
 This will copy the component views to `resources/views/vendor/ui/` where you can customize them.
 
+## Local Development
+
+For local development and testing of this library, see [dev-setup.md](dev-setup.md) for detailed instructions on setting up a development environment with path repositories.
+
 ## Troubleshooting
 
 ### Styles Not Appearing
