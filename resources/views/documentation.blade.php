@@ -4,40 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USSF UI Components Documentation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            prefix: 'ussf-',
-            theme: {
-                extend: {
-                    colors: {
-                        'ussf-blue': {
-                            100: '#e6f3ff',
-                            200: '#cce7ff',
-                            300: '#99d0ff',
-                            400: '#66b8ff',
-                            500: '#3399ff',
-                            600: '#0066cc',
-                            700: '#004499',
-                            800: '#003366',
-                            900: '#002244',
-                        },
-                        'ussf-red': {
-                            100: '#ffe6e6',
-                            200: '#ffcccc',
-                            300: '#ff9999',
-                            400: '#ff6666',
-                            500: '#ff3333',
-                            600: '#cc0000',
-                            700: '#990000',
-                            800: '#660000',
-                            900: '#440000',
-                        },
-                    }
-                }
-            }
-        }
-    </script>
+    @ussfStyles
 </head>
 <body class="ussf-bg-gray-100 ussf-font-sans">
     <div class="ussf-container ussf-mx-auto ussf-px-4 ussf-py-8">

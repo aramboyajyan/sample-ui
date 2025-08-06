@@ -19,20 +19,23 @@ php artisan vendor:publish --tag=ui-config
 php artisan vendor:publish --tag=ui-views
 ```
 
-4. Publish the CSS assets (optional):
+4. Publish the built CSS assets:
 ```bash
 php artisan vendor:publish --tag=ui-assets
 ```
 
-5. Include Tailwind CSS in your project and add the package paths to your Tailwind config:
-```javascript
-module.exports = {
-  content: [
-    // ... your existing paths
-    './vendor/aramboyajyan/sample-ui/resources/views/**/*.blade.php',
-  ],
-  // ... rest of config
-}
+5. Include the CSS in your layout:
+```blade
+{{-- Option 1: Use the Blade directive --}}
+@ussfStyles
+
+{{-- Option 2: Manual link tag --}}
+<link rel="stylesheet" href="{{ asset('vendor/ui/ui-components.css') }}">
+```
+
+6. (Optional) Publish CSS source files for customization:
+```bash
+php artisan vendor:publish --tag=ui-source
 ```
 
 ## Configuration
@@ -191,6 +194,8 @@ The Typography component provides consistent text styling for headings, paragrap
 
 ### Building CSS
 
+The library ships with pre-built CSS that includes all necessary styles with the `ussf-` prefix to avoid conflicts.
+
 1. Install dependencies:
 ```bash
 npm install
@@ -205,6 +210,19 @@ npm run dev
 ```bash
 npm run build
 ```
+
+The built CSS is automatically generated in the `dist/ui-components.css` file and includes:
+- All Tailwind CSS utilities with `ussf-` prefix
+- Component-specific classes
+- USSF brand colors (ussf-blue, ussf-red)
+- Custom font family support
+
+### CSS Publishing Tags
+
+- `ui-assets`: Publishes the built CSS file to `public/vendor/ui/ui-components.css`
+- `ui-source`: Publishes the source CSS files to `resources/css/vendor/ui/` for customization
+- `ui-views`: Publishes component views for customization
+- `ui-config`: Publishes the configuration file
 
 ### Custom Styling
 

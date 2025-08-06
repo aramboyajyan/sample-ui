@@ -17,8 +17,12 @@ class UiComponentsServiceProvider extends ServiceProvider
         ], 'ui-views');
 
         $this->publishes([
-            __DIR__ . '/../resources/css' => public_path('vendor/ui'),
+            __DIR__ . '/../dist' => public_path('vendor/ui'),
         ], 'ui-assets');
+
+        $this->publishes([
+            __DIR__ . '/../resources/css' => resource_path('css/vendor/ui'),
+        ], 'ui-source');
 
         $this->publishes([
             __DIR__ . '/../config/ui-components.php' => config_path('ui-components.php'),
@@ -35,6 +39,9 @@ class UiComponentsServiceProvider extends ServiceProvider
         if (config('ui-components.enable_documentation_route', false)) {
             $this->registerDocumentationRoute();
         }
+
+        // Register CSS helper blade directive
+        $this->registerCssDirective();
     }
 
     public function register()
@@ -64,5 +71,12 @@ class UiComponentsServiceProvider extends ServiceProvider
         Route::get('/ussf-ui', function () {
             return view('ui::documentation');
         })->name('ussf-ui.documentation');
+    }
+
+    protected function registerCssDirective()
+    {
+        Blade::directive('ussfStyles', function () {
+            return '<?php echo \'<link rel="stylesheet" href="\' . asset(\'vendor/ui/ui-components.css\') . \'">\'; ?>';
+        });
     }
 }

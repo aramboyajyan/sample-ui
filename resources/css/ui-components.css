@@ -9,31 +9,31 @@
 }
 
 @layer components {
-  .ui-button {
-    @apply inline-flex items-center justify-center font-medium border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  .ussf-ui-button {
+    @apply ussf-inline-flex ussf-items-center ussf-justify-center ussf-font-medium ussf-border ussf-transition-colors ussf-duration-200 focus:ussf-outline-none focus:ussf-ring-2 focus:ussf-ring-blue-500 focus:ussf-ring-offset-2 disabled:ussf-opacity-50 disabled:ussf-cursor-not-allowed;
   }
   
-  .ui-button--sm {
-    @apply px-3 py-1.5 text-sm;
+  .ussf-ui-button--sm {
+    @apply ussf-px-3 ussf-py-1.5 ussf-text-sm;
   }
   
-  .ui-button--md {
-    @apply px-4 py-2 text-base;
+  .ussf-ui-button--md {
+    @apply ussf-px-4 ussf-py-2 ussf-text-base;
   }
   
-  .ui-button--lg {
-    @apply px-6 py-3 text-lg;
+  .ussf-ui-button--lg {
+    @apply ussf-px-6 ussf-py-3 ussf-text-lg;
   }
   
-  .ui-button--primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white border-transparent;
+  .ussf-ui-button--primary {
+    @apply ussf-bg-blue-600 hover:ussf-bg-blue-700 ussf-text-white ussf-border-transparent;
   }
   
-  .ui-button--secondary {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 border-transparent;
+  .ussf-ui-button--secondary {
+    @apply ussf-bg-gray-200 hover:ussf-bg-gray-300 ussf-text-gray-900 ussf-border-transparent;
   }
   
-  .ui-button--blank {
-    @apply bg-transparent hover:bg-gray-100 text-gray-700 border-gray-300;
+  .ussf-ui-button--blank {
+    @apply ussf-bg-transparent hover:ussf-bg-gray-100 ussf-text-gray-700 ussf-border-gray-300;
   }
 }
