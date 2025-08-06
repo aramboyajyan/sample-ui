@@ -13,6 +13,6 @@ class P extends Component
 
   public function getClasses(): string
   {
-    return 'ussf-text-base ussf-text-gray-700 ussf-leading-relaxed';
+    return 'ussf-text-base ussf-text-gray-700 ussf-leading-relaxed ussf-mt-1 ussf-mb-1 test123';
   }
 }

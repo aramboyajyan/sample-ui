@@ -1,3 +1,27 @@
+const fs = require('fs');
+const path = require('path');
+
+const extractClasses = () => {
+  const componentDir = './resources/views';
+  const files = fs.readdirSync(componentDir, { recursive: true });
+  const classPattern = /class="([^"]*corporate[^"]*)"/g;
+  const foundClasses = new Set();
+
+  files.forEach(file => {
+    if (file.endsWith('.blade.php')) {
+      const content = fs.readFileSync(path.join(componentDir, file), 'utf8');
+      let match;
+      while ((match = classPattern.exec(content)) !== null) {
+        match[1].split(' ').forEach(cls => {
+          if (cls.includes('corporate')) foundClasses.add(cls);
+        });
+      }
+    }
+  });
+
+  return Array.from(foundClasses);
+};
+
 const ussfBlue = {
   DEFAULT: '#1e2031',
   50: '#f2f3f8',
