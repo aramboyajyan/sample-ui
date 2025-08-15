@@ -1,27 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-const extractClasses = () => {
-  const componentDir = './resources/views';
-  const files = fs.readdirSync(componentDir, { recursive: true });
-  const classPattern = /class="([^"]*corporate[^"]*)"/g;
-  const foundClasses = new Set();
-
-  files.forEach(file => {
-    if (file.endsWith('.blade.php')) {
-      const content = fs.readFileSync(path.join(componentDir, file), 'utf8');
-      let match;
-      while ((match = classPattern.exec(content)) !== null) {
-        match[1].split(' ').forEach(cls => {
-          if (cls.includes('corporate')) foundClasses.add(cls);
-        });
-      }
-    }
-  });
-
-  return Array.from(foundClasses);
-};
-
 const ussfBlue = {
   DEFAULT: '#1e2031',
   50: '#f2f3f8',
@@ -101,17 +77,49 @@ module.exports = {
     'ussf-list-inside',
     'ussf-space-y-1',
     'ussf-list-decimal',
-    // USSF colors
-    'ussf-bg-ussf-blue-600',
-    'ussf-bg-ussf-red-600',
-    'ussf-text-ussf-blue-500',
-    'ussf-text-ussf-red-500',
+    // USSF colors - all variations
+    'ussf-bg-ussf-blue-50',
+    'ussf-bg-ussf-blue-100',
+    'ussf-bg-ussf-blue-200',
     'ussf-bg-ussf-blue-300',
+    'ussf-bg-ussf-blue-400',
     'ussf-bg-ussf-blue-500',
+    'ussf-bg-ussf-blue-600',
     'ussf-bg-ussf-blue-700',
+    'ussf-bg-ussf-blue-800',
+    'ussf-bg-ussf-blue-900',
+    'ussf-bg-ussf-red-50',
+    'ussf-bg-ussf-red-100',
+    'ussf-bg-ussf-red-200',
     'ussf-bg-ussf-red-300',
+    'ussf-bg-ussf-red-400',
     'ussf-bg-ussf-red-500',
+    'ussf-bg-ussf-red-600',
     'ussf-bg-ussf-red-700',
+    'ussf-bg-ussf-red-800',
+    'ussf-bg-ussf-red-900',
+    'ussf-text-ussf-blue-50',
+    'ussf-text-ussf-blue-100',
+    'ussf-text-ussf-blue-200',
+    'ussf-text-ussf-blue-300',
+    'ussf-text-ussf-blue-400',
+    'ussf-text-ussf-blue-500',
+    'ussf-text-ussf-blue-600',
+    'ussf-text-ussf-blue-700',
+    'ussf-text-ussf-blue-800',
+    'ussf-text-ussf-blue-900',
+    'ussf-text-ussf-red-50',
+    'ussf-text-ussf-red-100',
+    'ussf-text-ussf-red-200',
+    'ussf-text-ussf-red-300',
+    'ussf-text-ussf-red-400',
+    'ussf-text-ussf-red-500',
+    'ussf-text-ussf-red-600',
+    'ussf-text-ussf-red-700',
+    'ussf-text-ussf-red-800',
+    'ussf-text-ussf-red-900',
+    'ussf-border-ussf-blue-500',
+    'ussf-border-ussf-red-500',
     // Common utility classes
     'ussf-font-sans',
   ],
